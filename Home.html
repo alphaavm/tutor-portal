@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tutors</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+<link rel="stylesheet" type="text/css" href="searchbar.css">
+
+<style type="text/css">a{
+    color: black;
+
+}
+a:hover {
+    background-color: hotpink;
+}
+
+body{
+background:black;
+}
+
+.button {
+    background-color: white; 
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<header >
+  <h3 style="font-family: Georgia, serif;color:black;">Alpha Tutors</h3>
+  <p align="right" style="font-size: 20px;color:gray">Find a tutor for yourself.</p>
+</header>
+
+<section>
+  <nav>
+    <marquee direction="up"scrollamount="2" style="font-family: "Gill Sans", sans-serif;">Welcome to our website here you can find a perfect tutor for your self just search the area and register your self self for a tutor later you will recieve a call from tutor for more enquiry<br>
+      <li>If you want to register your self as tutor you can signup yourself.</marquee>
+        <br><br><br><br>
+        
+        <br>
+        <center><div class="button"><a href="Signin.html">Signin</a></div></a ><br><br><div class="button"> <a href="signup.html" >Signup for Tutor</a></div><br><br>
+          <div class="button"><a href="test1.html">Find your location</a></div>
+        </center>
+  </nav>
+  
+  <article style="background:black;"><center>
+    <h1 style="font-size:175%; color:white;font-weight: bold; font-family: cursive;">Seacrh Your Area Here!
+
+    </h1></center>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Area.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="example.html">Vashi</a></li>
+  <li><a href="example.html">Dadar</a></li>
+
+  <li><a href="example.html">Chembur</a></li>
+  <li><a href="example.html">Borivali</a></li>
+
+  <li><a href="example.html">Thane</a></li>
+  <li><a href="example.html">Parel</a></li>
+  <li><a href="example.html">Vasai</a></li>
+</ul>
+  </article>
+</section>
+
+<footer>
+  <p>&copy;alphavm</p>
+</footer>
+<script>
+  
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

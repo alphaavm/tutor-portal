@@ -1,0 +1,68 @@
+<html><head><title>Signin</title>
+
+</head>
+	<style>div {
+    background-color:#FF7A7C;
+    width: 300px;
+    border: 5px solid red;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+   left: 100;
+    top: 10%;
+    width: 85%;
+ bottom:10%;
+    text-align: center;
+    font-family: broadway
+}
+body{
+	background:black;
+}
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor
+    
+    a:hover {
+    background-color: yellow;
+}
+</style>
+
+<body >
+<header><h1 style="color:white;" align="center"> <a href="home.html">HOME</a></span> </h1>
+<br></header><br>
+	<div id="mapholder123"><br><br><br><br>    
+<h1 style="color:black" id="demo">Click the button to get your position.</h1>
+
+<br><br>
+<button class="button" onclick="getLocation()">Try It</button>
+
+<br>
+
+</div>
+
+<script>
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+    document.getElementById("mapholder123").innerHTML = "<img src='"+img_url+"'>";
+}
+</script>
+</body></html>

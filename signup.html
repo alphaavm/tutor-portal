@@ -1,0 +1,86 @@
+<HTML>
+<HEAD><title>Signup</title> 
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style type="text/css">
+body{
+    margin:3px;
+    background-color:grey;
+    min-height:300px;
+    text-align:center;
+    font-size:large;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+a{
+  font-size: 20px;
+  text-align:left; 
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="header" id="myHeader"> <h4 style="color:black">Register and become a Tutor </h4>
+  <div align="left">
+  
+  <pre> <a href="home.html"  >Home</a> <a href="signin.html"  >Sign in</a></pre >
+
+</div>
+</header>
+
+ <form method="post" action="connect.php" >
+
+  <h1>Please Fill In Your Details</h1><div class="main" align="center">
+
+Name:&nbsp&nbsp&nbsp &nbsp<input type="text" align="right" width="48" height="48" name="name" required><br><br>
+Surname:&nbsp <input type="text" name="surname" required><br><br>
+Age:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="age"><br><br>
+Phone No:&nbsp <input type="text" name="phno" required><br><br>
+
+Email id:&nbsp <input type="text" name="eid" required><br>
+<br>
+Password.:&nbsp <input type="password" name="pass" required><br>
+<br>
+
+<h3>GENDER</h3>
+<input type="radio" name="sex" value"male">  Male<br><br>
+<input type="radio" name="sex" value"female">Female<br><br>
+
+
+Select your Area where you can teach:<select name="Interest">
+<option value="-1" SELECTED>Vashi	</option>
+
+  <option>Dadar</option>
+
+  <option>Chembur</option>
+  <option>Borivali</option>
+
+  <option>Thane</option>
+  <option>Parel</option>
+  <option>Vasai</option>
+</select>
+
+<h4 align="center"><input type="radio"name="r4" value"others">DO YOU AGREE TERMS AND CONDITION</h4>
+
+<button type="submit" class="button">Signup</button>
+<button type="reset" class="button">Reset</button>
+
+
+
+</form>
+
+
+</body>
+</html>
